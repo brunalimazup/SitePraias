@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="text-align: center"> Melhores Praias do Litoral Norte de São Paulo: </h1>
+    <div>
+
+        <div th:each="praia : ${praias}">
+            <h3 th:text="${praia.nome}"></h3>
+            <img th:attr="src=${praia.foto}">
+            <h4 th:text="${praia.descricao}"></h4>
+  
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
